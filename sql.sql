@@ -1,7 +1,9 @@
 CREATE TABLE `keys` (
   `ID` int(11) NOT NULL,
   `key` varchar(10) DEFAULT NULL,
-  `status` tinyint(1) DEFAULT NULL
+  `status` tinyint(1) DEFAULT NULL,
+  `desconto` int(3) DEFAULT NULL,
+  `usos` int(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 ALTER TABLE `keys`

@@ -42,7 +42,7 @@ if (isset($_POST['senha'])) {
             $row = $resultado_verifica->fetch_assoc();
             if ($row['total'] == 0) {
                 // Se a chave não existe no banco de dados, insere
-                $sql_inserir = "INSERT INTO `keys` (`ID`, `key`, `status`) VALUES (NULL, '$key', 0);";
+                $sql_inserir = "INSERT INTO `keys` (`ID`, `key`, `status`, `desconto`, `usos`) VALUES (NULL, '$key', 0, '{desconto}', '{usos}');";
                 $resultado_inserir = $conexao->query($sql_inserir);
                 if ($resultado_inserir) {
                     echo "<div class='alert alert-success' role='alert'>Código gerado e inserido no banco de dados.</div>";
